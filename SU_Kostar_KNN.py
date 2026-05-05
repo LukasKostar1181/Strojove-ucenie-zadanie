@@ -10,9 +10,7 @@ from sklearn.decomposition import PCA
 from collections import Counter
 
 def get_colors(n_classes):
-    """Vygeneruje n rôznych farieb - zelená, modrá, červená,..."""
     cmap = plt.get_cmap('tab10')
-    # Poradie: zelená(2), modrá(0), červená(3), oranžová(1), fialová(4),...
     color_order = [2, 0, 3, 1, 4, 5, 6, 7, 8, 9]
     return [cmap(color_order[i % len(color_order)]) for i in range(n_classes)]
 
